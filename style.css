@@ -1,0 +1,86 @@
+.banner-area {
+    padding: 20px;
+    /* Adjust padding as needed */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.b-content-1 {
+    padding: 20px;
+}
+
+.banner-area {
+    height: 100vh;
+    /* Full height of the viewport */
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    background-color: #f8f9fa;
+    /* Optional background color */
+    text-align: center;
+    /* Center text horizontally */
+}
+
+.b-content-1 {
+    color: #333;
+    /* Text color */
+}
+
+/* h1,
+p {
+    margin: 0;
+    Remove default margin
+} */
+
+.about-area {
+    height: 100vh;
+    /* Full height of the viewport */
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    background-color: #f8f9fa;
+    /* Optional background color */
+    text-align: center;
+    /* Center text horizontally */
+    border-top: 2px solid blue
+}
+
+.skills-area {
+    height: 100vh;
+    /* Full height of the viewport */
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    background-color: #f8f9fa;
+    /* Optional background color */
+    text-align: center;
+    /* Center text horizontally */
+    border-top: 2px solid red
+}
+
+.contact-area {
+    height: 100vh;
+    /* Full height of the viewport */
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    background-color: #f8f9fa;
+    /* Optional background color */
+    text-align: center;
+    /* Center text horizontally */
+    border-top: 2px solid orange
+}
