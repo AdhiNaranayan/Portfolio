@@ -23,14 +23,15 @@
     /* Center vertically */
     justify-content: center;
     /* Center horizontally */
-    background-color: #f8f9fa;
+    color: #f8f9fa;
     /* Optional background color */
     text-align: center;
     /* Center text horizontally */
+    background-color: #1A3636;
 }
 
 .b-content-1 {
-    color: #333;
+    color: #f8f9fa;
     /* Text color */
 }
 
@@ -83,4 +84,81 @@ p {
     text-align: center;
     /* Center text horizontally */
     border-top: 2px solid orange
+}
+
+.nav {
+    background-color: transparent;
+    color: #D6BD98;
+}
+
+.nav-link {
+    color: #D6BD98;
+    font-size: 16px;
+}
+
+
+.name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 48px;
+    color: #ffffff;
+    /* Fallback color */
+    background: linear-gradient(to right, #4d4d4d, white, #4d4d4d);
+    -webkit-background-clip: text;
+    /* For WebKit browsers */
+    -webkit-text-fill-color: transparent;
+    /* For WebKit browsers */
+    background-clip: text;
+    /* Standard syntax for future compatibility */
+    text-fill-color: transparent;
+    /* No standard syntax yet, for future proofing */
+    animation: shine 3s infinite linear;
+    white-space: nowrap;
+    text-decoration: none;
+    /* Only needed if .name is an <a> tag */
+}
+
+/* Animation Example */
+@keyframes shine {
+    0% {
+        background-position: 0%;
+    }
+
+    60% {
+        background-position: 180px;
+    }
+
+    100% {
+        background-position: 180%;
+    }
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    background: linear-gradient(90deg,
+            #9b8127 0%,
+            #d4b550 39%,
+            #fee8a1 50%,
+            #d4b550 61%,
+            #9b8127 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: move 3s ease infinite;
+    /* font-size: 1em; */
+    font-weight: bold;
+}
+
+@keyframes move {
+    0% {
+        background-position: -100% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
 }
