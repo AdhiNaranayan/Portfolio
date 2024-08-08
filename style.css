@@ -53,22 +53,22 @@ p {
     /* Optional background color */
     text-align: center;
     /* Center text horizontally */
-    border-top: 2px solid blue
+    /* border-top: 2px solid blue */
 }
 
 .skills-area {
     height: 100vh;
     /* Full height of the viewport */
-    display: flex;
+    display: grid;
     align-items: center;
     /* Center vertically */
-    justify-content: center;
+    /* justify-content: center; */
     /* Center horizontally */
     background-color: #f8f9fa;
     /* Optional background color */
-    text-align: center;
+    /* text-align: center; */
     /* Center text horizontally */
-    border-top: 2px solid red
+    /* border-top: 2px solid red */
 }
 
 .contact-area {
@@ -161,4 +161,27 @@ p {
     100% {
         background-position: 100% 0%;
     }
+}
+
+.who {
+    color: #d4b550;
+    font-size: 4rem;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.skills-title {
+    color: #d4b550;
+    font-size: 4rem;
+    font-family: 'Helvetica', sans-serif;
+    text-align: center;
+}
+
+.card {
+    height: 250px;
+    width: 100%;
+    background: #e8e8e8;
+    box-shadow: 1px 1px 5px lightgrey;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
 }
