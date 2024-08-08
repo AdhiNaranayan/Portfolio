@@ -185,3 +185,40 @@ p {
     border: 1px solid lightgrey;
     border-radius: 4px;
 }
+
+
+
+/*  */
+.logo-slider {
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    margin-left: 100px;
+}
+
+.logo-slider .slides {
+    display: flex;
+    animation: slide 15s linear infinite;
+}
+
+.logo-slider .slide {
+    flex: 0 0 auto;
+    width: 100px;
+    /* Adjust width as needed */
+    margin: 0 20px;
+}
+
+.logo-slider img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
