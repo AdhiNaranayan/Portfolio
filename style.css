@@ -370,20 +370,20 @@ ul {
     overflow: hidden;
 }
 
-.subscribe-form input {
+/* .subscribe-form input {
     width: 100%;
     padding: 14px 28px;
     background: #2E2E2E;
     border: 1px solid #2E2E2E;
     color: #fff;
-}
+} */
 
-.subscribe-form button {
+/* .subscribe-form button {
     position: absolute;
     right: 0;
-    background: #ff5e14;
-    padding: 13px 20px;
-    border: 1px solid #ff5e14;
+    background: #9b8127;
+    padding: 29px 20px;
+    border: 1px solid #9b8127;
     top: 0;
 }
 
@@ -391,10 +391,10 @@ ul {
     color: #fff;
     font-size: 22px;
     transform: rotate(-6deg);
-}
+} */
 
 .copyright-area {
-    background: #202020;
+    background: #fffdfd;
     padding: 25px 0;
 }
 
@@ -405,7 +405,7 @@ ul {
 }
 
 .copyright-text p a {
-    color: #ff5e14;
+    color: #9b8127;
 }
 
 .footer-menu li {
@@ -414,7 +414,7 @@ ul {
 }
 
 .footer-menu li:hover a {
-    color: #ff5e14;
+    color: #d4b550;
 }
 
 .footer-menu li a {
