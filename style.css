@@ -240,7 +240,7 @@ ul {
 }
 
 .footer-cta {
-    border-bottom: 1px solid #373636;
+    border-bottom: 1px solid #d4b550;
 }
 
 .single-cta i {
@@ -263,8 +263,15 @@ ul {
 }
 
 .cta-text span {
-    color: #757575;
+    color: #d4b550;
     font-size: 15px;
+}
+
+.e-label {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2px;
 }
 
 .footer-content {
@@ -292,7 +299,7 @@ ul {
 .footer-text p {
     margin-bottom: 14px;
     font-size: 14px;
-    color: #7e7e7e;
+    color: #d4b550;
     line-height: 28px;
 }
 
@@ -319,17 +326,6 @@ ul {
     border-radius: 50%;
 }
 
-.facebook-bg {
-    background: #3B5998;
-}
-
-.twitter-bg {
-    background: #55ACEE;
-}
-
-.google-bg {
-    background: #DD4B39;
-}
 
 .footer-widget-heading h3 {
     color: #fff;
@@ -361,7 +357,7 @@ ul {
 }
 
 .footer-widget ul li a {
-    color: #878787;
+    color: #d4b550;
     text-transform: capitalize;
 }
 
@@ -419,5 +415,5 @@ ul {
 
 .footer-menu li a {
     font-size: 14px;
-    color: #878787;
+    color: #d4b550;
 }
