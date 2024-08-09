@@ -40,6 +40,19 @@
     color: #f8f9fa;
 }
 
+@media (max-width: 768px) {
+    .b-content-1 h1.name {
+        font-size: 2rem;
+        /* Smaller size for mobile */
+    }
+
+    .b-content-1 p {
+        font-size: 1rem;
+        /* Smaller size for mobile */
+    }
+}
+
+
 .about-area {
     height: 90vh;
     display: flex;
@@ -55,6 +68,7 @@
     align-items: center;
     background-color: #f8f9fa;
 }
+
 
 .contact-area {
     height: 100vh;
@@ -160,7 +174,10 @@
     border-radius: 4px;
 }
 
-
+.para {
+    text-align: justify;
+    margin: 30px;
+}
 
 /*  */
 .logo-slider {
