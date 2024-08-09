@@ -1,6 +1,17 @@
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(184, 184, 184, 0.8);
+}
+
+.navbar-brand {
+    color: #9b8127;
+}
+
 .banner-area {
     padding: 20px;
-    /* Adjust padding as needed */
 }
 
 .text-center {
@@ -17,72 +28,41 @@
 
 .banner-area {
     height: 100vh;
-    /* Full height of the viewport */
     display: flex;
     align-items: center;
-    /* Center vertically */
     justify-content: center;
-    /* Center horizontally */
     color: #f8f9fa;
-    /* Optional background color */
     text-align: center;
-    /* Center text horizontally */
     background-color: #1A3636;
 }
 
 .b-content-1 {
     color: #f8f9fa;
-    /* Text color */
 }
 
-/* h1,
-p {
-    margin: 0;
-    Remove default margin
-} */
-
 .about-area {
-    height: 100vh;
-    /* Full height of the viewport */
+    height: 90vh;
     display: flex;
     align-items: center;
-    /* Center vertically */
     justify-content: center;
-    /* Center horizontally */
     background-color: #f8f9fa;
-    /* Optional background color */
     text-align: center;
-    /* Center text horizontally */
-    /* border-top: 2px solid blue */
 }
 
 .skills-area {
-    height: 100vh;
-    /* Full height of the viewport */
+    height: 80vh;
     display: grid;
     align-items: center;
-    /* Center vertically */
-    /* justify-content: center; */
-    /* Center horizontally */
     background-color: #f8f9fa;
-    /* Optional background color */
-    /* text-align: center; */
-    /* Center text horizontally */
-    /* border-top: 2px solid red */
 }
 
 .contact-area {
     height: 100vh;
-    /* Full height of the viewport */
     display: flex;
     align-items: center;
-    /* Center vertically */
     justify-content: center;
-    /* Center horizontally */
     background-color: #f8f9fa;
-    /* Optional background color */
     text-align: center;
-    /* Center text horizontally */
     border-top: 2px solid orange
 }
 
@@ -104,20 +84,14 @@ p {
     transform: translate(-50%, -50%);
     padding: 12px 48px;
     color: #ffffff;
-    /* Fallback color */
     background: linear-gradient(to right, #4d4d4d, white, #4d4d4d);
     -webkit-background-clip: text;
-    /* For WebKit browsers */
     -webkit-text-fill-color: transparent;
-    /* For WebKit browsers */
     background-clip: text;
-    /* Standard syntax for future compatibility */
     text-fill-color: transparent;
-    /* No standard syntax yet, for future proofing */
     animation: shine 3s infinite linear;
     white-space: nowrap;
     text-decoration: none;
-    /* Only needed if .name is an <a> tag */
 }
 
 /* Animation Example */
@@ -204,7 +178,6 @@ p {
 .logo-slider .slide {
     flex: 0 0 auto;
     width: 100px;
-    /* Adjust width as needed */
     margin: 0 20px;
 }
 
