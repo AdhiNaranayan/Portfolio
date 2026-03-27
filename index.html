@@ -93,14 +93,32 @@
       border-color: var(--border);
     }
     .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 0.55rem;
+    }
+    .nav-logo img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      display: block;
+      /* fallback hidden until image loads */
+    }
+    .nav-logo-svg {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+    .nav-logo-text {
       font-family: var(--font-display);
       font-size: 1.25rem;
       font-weight: 800;
       color: var(--text);
-      text-decoration: none;
       letter-spacing: -0.02em;
+      line-height: 1;
     }
-    .nav-logo span { color: var(--accent); }
+    .nav-logo-text span { color: var(--accent); }
     .nav-links {
       display: flex;
       gap: 2.5rem;
@@ -764,6 +782,16 @@
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
+  <div style="display:flex;align-items:center;gap:0.55rem;margin-bottom:1rem;">
+    <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="36" rx="10" fill="#4fffb0" fill-opacity="0.12"/>
+      <rect x="0.75" y="0.75" width="34.5" height="34.5" rx="9.25" stroke="#4fffb0" stroke-opacity="0.4" stroke-width="1.5"/>
+      <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle"
+            font-family="Syne,sans-serif" font-weight="800" font-size="15"
+            fill="#4fffb0" letter-spacing="-0.5">AN</text>
+    </svg>
+    <span style="font-family:var(--font-display);font-weight:800;font-size:1.2rem;color:var(--text);">Adhi<span style="color:var(--accent);">.</span></span>
+  </div>
   <a href="#home"    onclick="closeMobile()">Home</a>
   <a href="#about"   onclick="closeMobile()">About</a>
   <a href="#skills"  onclick="closeMobile()">Skills</a>
@@ -772,7 +800,22 @@
 
 <!-- NAVBAR -->
 <nav id="navbar">
-  <a class="nav-logo" href="#home">Adhi<span>.</span></a>
+  <a class="nav-logo" href="#home" id="navLogo">
+    <div class="nav-logo-svg" id="logoSvg">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="10" fill="#4fffb0" fill-opacity="0.12"/>
+        <rect x="0.75" y="0.75" width="34.5" height="34.5" rx="9.25" stroke="#4fffb0" stroke-opacity="0.4" stroke-width="1.5"/>
+        <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle"
+              font-family="Syne,sans-serif" font-weight="800" font-size="15"
+              fill="#4fffb0" letter-spacing="-0.5">AN</text>
+      </svg>
+      <span class="nav-logo-text">Adhi<span>.</span></span>
+    </div>
+    <img id="logoImg" src="./assets/images/Logo3.png" alt="Adhi Logo"
+         style="display:none; width:44px; height:44px; object-fit:contain;"
+         onerror="this.style.display='none'; document.getElementById('logoSvg').style.display='flex';"
+         onload="this.style.display='block'; document.getElementById('logoSvg').style.display='none';" />
+  </a>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -814,7 +857,14 @@
 <section id="about">
   <div class="about-wrapper">
     <div class="about-image-wrap reveal">
-      <div class="about-image-placeholder">AN</div>
+      <!-- Real photo — shows placeholder if file not found -->
+      <img id="profileImg"
+           src="./assets/images/ADHI.png"
+           alt="Adhi Narayanan"
+           class="about-real-img"
+           style="width:100%; border-radius:20px; display:block; filter:grayscale(15%); transition:filter 0.4s;"
+           onerror="this.style.display='none'; document.getElementById('profilePlaceholder').style.display='flex';" />
+      <div class="about-image-placeholder" id="profilePlaceholder" style="display:none;">AN</div>
     </div>
     <div class="about-text reveal" style="transition-delay:0.15s">
       <span class="section-label">About Me</span>
@@ -977,7 +1027,7 @@
         <div class="contact-icon">✉️</div>
         <div>
           <div class="contact-label">Email</div>
-          <div class="contact-value">narayananadhi766@gmail.com</div>
+          <div class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe909f8c9f879f909f909f9a9697c9c8c8be99939f9792d09d9193">[email&#160;protected]</a></div>
         </div>
       </div>
       <div class="social-links">
@@ -1015,7 +1065,7 @@
   <p>&copy; 2024 Adhi Narayanan P. All Rights Reserved. Crafted with ♥</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── Cursor ──────────────────────────────────────────
   const cursor = document.getElementById('cursor');
   const ring   = document.getElementById('cursor-ring');
@@ -1079,10 +1129,4 @@
   }, { threshold: 0.5 });
   bars.forEach(b => barIO.observe(b));
 
-  // ── Replace placeholder with real image if exists ──
-  // (uncomment and set src if ADHI.png is present)
-  // const placeholder = document.querySelector('.about-image-placeholder');
-  // if (placeholder) { placeholder.outerHTML = '<img src="./assets/images/ADHI.png" alt="Adhi" class="..." />'; }
-</script>
-</body>
-</html>
+  // ── Profile image: handled via onerror/onload on the img tag directly ──
